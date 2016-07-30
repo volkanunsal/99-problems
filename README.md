@@ -27,6 +27,33 @@ func myLast(arr []interface{}) interface{} {
 
 # Find the last but one element of a list.
 __Difficulty: :white_check_mark:__
+
+
+## Go
+
+```go
+> myButLast([]interface{}{1, 2, 3, 4})
+3
+> myButLast([]interface{}{"x","y","z"})
+'y'
+> myButLast([]interface{}{})
+nil
+> myButLast([]interface{}{"x"})
+nil
+```
+*Solution:*
+
+```go
+func myButLast(arr []interface{}) interface{} {
+  if length := len(arr); length == 0 || length == 1 {
+    return nil
+  }
+  return arr[len(arr) - 2]
+}
+```
+
+[Playground](https://play.golang.org/p/PYXaCAI-XR)
+
 # Find the Kth element of a list.
 __Difficulty: :white_check_mark:__
 # Find the number of elements of a list.

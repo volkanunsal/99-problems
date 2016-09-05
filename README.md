@@ -96,6 +96,33 @@ Casting from string to `[]interface{}` automatically is not possible. The workar
 
 # Find the number of elements of a list.
 __Difficulty: :white_check_mark:__
+
+## Go
+
+```go
+> myLength([]interface{}{123, 456, 789})
+3
+> myLength([]interface{}{"Hello, world!"})
+13
+```
+
+*Solution:*
+
+```go
+func myLength1(arr []int) interface{} {
+  return len(arr)
+}
+
+func myLength2(arr string) interface{} {
+  return len(arr)
+}
+
+func main() {
+  fmt.Println(myLength1([]int{123, 456, 789}))
+  fmt.Println(myLength2("haskell"))
+}
+```
+
 # Reverse a list.
 __Difficulty: :white_check_mark:__
 # Find out whether a list is a palindrome.
